@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS. Основные понятия.</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <h1>CSS. Основные понятия.</h1>
+   <ol>
+      <li><a href="#menu1">Способы подключения CSS к документу</a></ul>
+      <li><a href="#menu2">Правила построения CSS</a></ul>
+      <li><a href="#menu3">Пример таблицы стилей</a></ul>
+   </ol>
+   <p><strong>CSS (англ. Cascading Style Sheets — каскадные таблицы стилей)</strong> — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.
+Преимущественно используется как средство описания, оформления внешнего вида веб-страниц, 
+написанных с помощью языков разметки HTML и XHTML, но может также применяться к любым XML-документам, 
+например, к SVG или XUL.</p>
+
+<h2 id="menu1">Способы подключения CSS к документу</h2>
+
+<p>Правила CSS пишутся на формальном языке CSS и располагаются в таблицах стилей, то есть таблицы стилей содержат в себе правила CSS. 
+Эти таблицы стилей могут располагаться как в самом веб-документе, внешний вид которого они описывают, так и в отдельных файлах, имеющих формат CSS. 
+(По сути, формат CSS — это обычный текстовый файл. В файле .css не содержится ничего, кроме перечня правил CSS и комментариев к ним.)
+То есть, эти таблицы стилей могут быть подключены, внедрены в описываемый ими веб-документ четырьмя различными способами:</p>
+
+<ul>
+<li>когда таблица стилей находится в отдельном файле, она может быть подключена к веб-документу посредством тега <span class="tag">&lt;link&gt;</span>, 
+располагающегося в этом документе между тегами <span class="tag">&lt;head&gt;</span> и <span class="tag">&lt;/head&gt;</span>. 
+(Тег <span class="tag">&lt;link&gt;</span> будет иметь атрибут <span class="atr">href</span>, имеющий значением адрес этой таблицы стилей).
+ Все правила этой таблицы действуют на протяжении всего документа;</li>
+ 
+ <li>когда таблица стилей находится в отдельном файле, она может быть подключена к веб-документу посредством директивы @import,
+ располагающейся в этом документе между тегами <span class="tag">&lt;style&gt;</span> и <span class="tag">&lt;/style&gt</span>; 
+ (которые, в свою очередь, располагаются в этом документе между тегами <span class="tag">&lt;head&gt;</span> и <span class="tag">&lt;/head&gt;</span>) 
+ сразу после тега <span class="tag">&lt;style&gt;</span>, которая также указывает (в своих скобках, после слова url) на адрес этой таблицы стилей. 
+ Все правила этой таблицы действуют на протяжении всего документа;</li>
+ 
+ <li>когда таблица стилей описана в самом документе, она может располагаться в нём между тегами <span class="tag">&lt;style&gt;</span> и <span class="tag">&lt;/style&gt</span>; 
+(которые, в свою очередь, располагаются в этом документе между тегами <span class="tag">&lt;head&gt;</span> и <span class="tag">&lt;/head&gt;</span>). 
+Все правила этой таблицы действуют на протяжении всего документа;</li>
+
+<li>когда таблица стилей описана в самом документе, она может располагаться в нём в теле какого-то отдельного тега (
+посредством его атрибута <span class="atr">style</span>) этого документа. Все правила этой таблицы действуют только на содержимое этого тега.</li>
+</ul>
+ 
+<h2 id="menu2">Правила построения CSS</h2>
+
+<p>В первых трёх случаях подключения таблицы CSS к документу (см. выше) каждое правило CSS из таблицы стилей имеет две основные части — 
+селектор и блок объявлений. Селектор, расположенный в левой части правила, определяет, на какие части документа распространяется правило.
+ Блок объявлений располагается в правой части правила. Он помещается в фигурные скобки, и, в свою очередь, состоит из одного или более объявлений,
+ разделённых знаком «;». Каждое объявление представляет собой сочетание свойства CSS и значения, разделённых знаком ": ". 
+ Селекторы могут группироваться в одной строке через запятую. 
+В таком случае свойство применяется к каждому из них.</p>
+
+<h2 id="menu3">Пример таблицы стилей</h2>
+
+Пример таблицы стилей (в таком виде она может быть либо размещена в отдельном файле .css либо же обрамлена тегами &lt;style&gt; 
+и размещена в «шапке» той самой веб-страницы, на которую она действует):
+
+<pre>
+<span class="style1">p</span> <span class="style5">{</span>
+   <span class="style2">font-family</span><span class="style5">:</span> <span class="style3">arial</span><span class="style5">,</span> <span class="style3">helvetica</span><span class="style5">,</span> <span class="style3">sans-serif</span><span class="style5">;</span> 
+   <span class="style5">}</span>
+<span class="style1">h2</span> <span class="style5">{</span>
+   <span class="style2">font-size</span><span class="style5">:</span> <span class="style4">20pt</span><span class="style5">;</span> 
+   <span class="style2">color</span><span class="style5">:</span> <span class="style3">red</span><span class="style5">;</span>
+   <span class="style2">background</span><span class="style5">:</span> <span class="style3">white</span><span class="style5">;</span> 
+   <span class="style5">}</span>
+<span class="style1">.note</span> <span class="style5">{</span>
+   <span class="style2">color</span><span class="style5">:</span> <span class="style3">red</span><span class="style5">;</span> 
+   <span class="style2">background-color</span><span class="style5">:</span> <span class="style3">yellow</span><span class="style5">;</span>
+   <span class="style2">font-weight</span><span class="style5">:</span> <span class="style3">bold</span><span class="style5">;</span> 
+   <span class="style5">}</span>
+<span class="style1">p#paragraph1</span> <span class="style5">{</span>
+   <span class="style2">padding-left</span><span class="style5">:</span> <span class="style4">10px</span><span class="style5">;</span>
+   <span class="style5">}</span>
+</pre>
+</body>
+</html>

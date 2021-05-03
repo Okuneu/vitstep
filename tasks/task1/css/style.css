@@ -1,0 +1,54 @@
+h1 {
+    font-family: Arial, sans-serif;
+    color: red;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+
+p {
+    font-size: 14px;
+    font-family: Helvetica, serif;
+  }
+
+h2 {
+        color: blue;
+        font-size: 24px;
+        font-style: italic;
+    }
+
+ul {
+        color: gray;
+        font-family: monospace;
+        font-size: larger;
+    }
+    
+ol {
+      color: blue;
+    }
+
+.tag {
+      color: #87f707ea;
+    }
+
+.atr {
+      color: rgb(0, 140, 255);
+    }
+
+.style1 {
+    color: goldenrod;
+  }
+.style2 {
+  color: rgb(10, 190, 245);
+}
+.style3 {
+  color: chocolate;
+}
+.style4 {
+  color: darkseagreen;
+}
+.style5 {
+  color: aliceblue;
+}
+pre {
+  background-color: black;
+}
