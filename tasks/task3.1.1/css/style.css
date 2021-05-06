@@ -1,0 +1,17 @@
+caption{
+    font-size: 35px;
+}
+table{
+    border-spacing: 0;
+    border-collapse:separate;
+    border: 2px solid black;
+    border-radius: 0px;
+}
+td{
+	width: 150px;
+	height: 75px;
+	background: rgb(165, 3, 3);
+    border: 2px solid black;
+    color: white;
+    font-size: 25px;
+}
