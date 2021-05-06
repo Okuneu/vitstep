@@ -1,18 +1,24 @@
+caption{
+    font-size: 35px;
+}
 table{
-    border-spacing: 10;
-    border-collapse: separate;
-    border: 50px solid rgb(221, 16, 16);
-    border-radius: 30px;
-    border-image: url(image.png) 30px round; 
+    border-spacing: 0;
+    border-collapse:collapse;
+    border: 1px solid black;
 }
 td{
-	width: 50px;
-	height: 50px;
-	background: #fff;
+	width: 100px;
+	height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 35px;
 }
-tr:nth-child(2n+1) td:nth-child(2n+1){
-	background: rgb(238, 7, 7);
+tr:nth-child(2) td:nth-child(1) tr:nth-child(2) td:nth-child(2) tr:nth-child(2) td:nth-child(3) tr:nth-child(2) td:nth-child(4){
+    background-color: gray;
 }
-tr:nth-child(2n) td:nth-child(2n){
-	background: #000;
-}	
+td:nth-child(n+6){
+    color: red;
+}
+tr:nth-child(4) td:nth-child(2){
+    color: red;
+}

@@ -1,0 +1,18 @@
+caption{
+    font-size: 35px;
+}
+table{
+    border-spacing: 0;
+    border-collapse:collapse;
+    border: 2px solid black;
+    border-radius: 0px;
+}
+td{
+	width: 100px;
+	height: 100px;
+	background: white;
+    border: 0;
+}
+tr:nth-child(2) td:nth-child(2){
+    border: 2px solid black;
+}
