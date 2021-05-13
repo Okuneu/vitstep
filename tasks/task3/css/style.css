@@ -1,10 +1,12 @@
 caption{
     font-size: 35px;
+    color: blue;
 }
 table{
     border-spacing: 0;
     border-collapse:collapse;
     border: 1px solid black;
+    table-layout: fixed;
 }
 td{
 	width: 100px;
@@ -13,12 +15,27 @@ td{
     text-align: center;
     font-size: 35px;
 }
-tr:nth-child(2) td:nth-child(1) tr:nth-child(2) td:nth-child(2) tr:nth-child(2) td:nth-child(3) tr:nth-child(2) td:nth-child(4){
+.graydays{
     background-color: gray;
 }
 td:nth-child(n+6){
-    color: red;
+    color: #a51818;
+    background-color: rgb(241, 148, 148);
 }
 tr:nth-child(4) td:nth-child(2){
-    color: red;
+    color: rgba(237,28,36,0.8);
+    font-size: 70px;
+}
+.birthday{
+    background-image: url(../../../pictures/birthday.png);
+    background-size: cover;
+}
+tr:nth-child(4) td:nth-child(6){
+    background-image: url(../../../pictures/happy1.jpg);
+    background-size: cover;
+}
+tr:nth-child(6) td:nth-child(3){
+    background-image: url(../../../pictures/happy2.jpg);
+    background-size:cover;
+    text-overflow: ellipsis;
 }
