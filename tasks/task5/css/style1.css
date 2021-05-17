@@ -1,0 +1,34 @@
+.out1{
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    background-color: gray;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+.in{
+    width: 100px;
+    height:100px;
+    position: fixed;
+    background-color: khaki;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    line-height: 100px;
+}
+.in1{
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+.in2{
+    top: calc(50% - 200px);
+    left: calc(50% + 100px);
+}
+.in3{
+    top: calc(50% + 100px);
+    left: calc(50% + 100px);
+}
+.in4{
+    top: calc(50% + 100px);
+    left: calc(50% - 200px);
+}
